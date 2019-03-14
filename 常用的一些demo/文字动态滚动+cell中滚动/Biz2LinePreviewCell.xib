@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="VNo-QP-yl0" customClass="Biz2LinePreviewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VNo-QP-yl0" id="ONI-oL-mUW">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="72.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通知公告" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhT-MR-JuX">
+                        <rect key="frame" x="10" y="13" width="62" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEB-bl-wqj">
+                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="t4c-vN-1C6"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="公告喇叭" translatesAutoresizingMaskIntoConstraints="NO" id="os4-XW-kDE">
+                        <rect key="frame" x="77" y="16" width="12" height="12"/>
+                    </imageView>
+                    <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ytf-jf-Cej">
+                        <rect key="frame" x="248" y="7" width="62" height="30"/>
+                        <state key="normal" title="查看更多"/>
+                        <connections>
+                            <action selector="btnClicked:" destination="VNo-QP-yl0" eventType="touchUpInside" id="qcq-iK-fDF"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PhT-MR-JuX" firstAttribute="leading" secondItem="ONI-oL-mUW" secondAttribute="leading" constant="10" id="6nm-GG-Azc"/>
+                    <constraint firstAttribute="trailing" secondItem="Ytf-jf-Cej" secondAttribute="trailing" constant="10" id="HLf-96-mPk"/>
+                    <constraint firstItem="GEB-bl-wqj" firstAttribute="leading" secondItem="ONI-oL-mUW" secondAttribute="leading" id="Te3-cJ-xas"/>
+                    <constraint firstAttribute="trailing" secondItem="GEB-bl-wqj" secondAttribute="trailing" id="Vi8-u0-kwa"/>
+                    <constraint firstItem="os4-XW-kDE" firstAttribute="leading" secondItem="PhT-MR-JuX" secondAttribute="trailing" constant="5" id="WJy-0J-6ED"/>
+                    <constraint firstItem="Ytf-jf-Cej" firstAttribute="centerY" secondItem="PhT-MR-JuX" secondAttribute="centerY" id="osC-Y6-4u4"/>
+                    <constraint firstItem="GEB-bl-wqj" firstAttribute="top" secondItem="PhT-MR-JuX" secondAttribute="bottom" constant="12.5" id="rSa-dG-E7N"/>
+                    <constraint firstItem="os4-XW-kDE" firstAttribute="centerY" secondItem="PhT-MR-JuX" secondAttribute="centerY" id="rW5-TB-IYe"/>
+                    <constraint firstItem="PhT-MR-JuX" firstAttribute="top" secondItem="ONI-oL-mUW" secondAttribute="top" constant="12.5" id="uFK-dX-G8R"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnMore" destination="Ytf-jf-Cej" id="th3-qH-jW1"/>
+                <outlet property="lblTitle" destination="PhT-MR-JuX" id="kOD-Km-7C4"/>
+            </connections>
+            <point key="canvasLocation" x="-19" y="85"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="公告喇叭" width="12" height="12"/>
+    </resources>
+</document>
